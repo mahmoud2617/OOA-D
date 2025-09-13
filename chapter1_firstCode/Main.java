@@ -1,3 +1,5 @@
+package OOA_D.chapter1_firstCode;
+
 public class Main {
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
