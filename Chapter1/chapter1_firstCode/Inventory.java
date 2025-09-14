@@ -1,4 +1,4 @@
-package OOA_D.chapter1_firstCode;
+package OOA_D.Chapter1.chapter1_firstCode;
 
 import java.util.Iterator;
 import java.util.LinkedList;

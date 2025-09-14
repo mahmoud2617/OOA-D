@@ -1,4 +1,4 @@
-package OOA_D.chapter1_firstCode;
+package OOA_D.Chapter1.chapter1_firstCode;
 
 public class Guitar {
     private String serialNumber, builder, model, type, backWood, topWood;
