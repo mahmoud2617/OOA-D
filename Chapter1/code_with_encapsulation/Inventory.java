@@ -1,4 +1,4 @@
-package OOA_D.Chapter1.chapter1_secondCode;
+package OOA_D.Chapter1.code_with_encapsulation;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -29,29 +29,31 @@ public class Inventory {
         return null;
     }
 
-    public Guitar search(Guitar searchGuitar) {
+    public List search(GuitarSpec searchSpec) {
+        List matchingGuitars = new LinkedList();
         for (Iterator i = guitars.iterator(); i.hasNext();) {
             Guitar guitar = (Guitar) i.next();
+            GuitarSpec guitarSpec = guitar.getSpec();
 
-            if (searchGuitar.getBuilder() != guitar.getBuilder())
+            if (searchSpec.getBuilder() != guitarSpec.getBuilder())
                 continue;
 
-            String model = searchGuitar.getModel().toLowerCase();
+            String model = searchSpec.getModel().toLowerCase();
             if ((model != null) && (!model.equals(""))
-                && (!model.equals(guitar.getModel().toLowerCase())))
+                && (!model.equals(guitarSpec.getModel().toLowerCase())))
                 continue;
 
-            if (searchGuitar.getType() != guitar.getType())
+            if (searchSpec.getType() != guitarSpec.getType())
                 continue;
 
-            if (searchGuitar.getBackWood() != guitar.getBackWood())
+            if (searchSpec.getBackWood() != guitarSpec.getBackWood())
                 continue;
 
-            if (searchGuitar.getTopWood() != guitar.getTopWood())
+            if (searchSpec.getTopWood() != guitarSpec.getTopWood())
                 continue;
 
-            return guitar;
+            matchingGuitars.add(guitar);
         }
-        return null;
+        return matchingGuitars;
     }
 }

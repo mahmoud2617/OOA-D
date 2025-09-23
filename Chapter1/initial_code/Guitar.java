@@ -1,14 +1,11 @@
-package OOA_D.Chapter1.chapter1_secondCode;
+package OOA_D.Chapter1.initial_code;
 
 public class Guitar {
-    private String serialNumber, model;
-    Type type;
-    Builder builder;
-    Wood backWood, topWood;
+    private String serialNumber, builder, model, type, backWood, topWood;
     private double price;
 
-    public Guitar(String serialNumber, double price, Builder builder,
-                  String model, Type type, Wood backWood, Wood topWood) {
+    public Guitar(String serialNumber, double price, String builder,
+                  String model, String type, String backWood, String topWood) {
         this.serialNumber = serialNumber;
         this.price = price;
         this.builder = builder;
@@ -30,7 +27,7 @@ public class Guitar {
         this.price = newPrice;
     }
 
-    public Builder getBuilder() {
+    public String getBuilder() {
         return builder;
     }
 
@@ -38,15 +35,15 @@ public class Guitar {
         return model;
     }
 
-    public Type getType() {
+    public String getType() {
         return type;
     }
 
-    public Wood getBackWood() {
+    public String getBackWood() {
         return backWood;
     }
 
-    public Wood getTopWood() {
+    public String getTopWood() {
         return topWood;
     }
 }

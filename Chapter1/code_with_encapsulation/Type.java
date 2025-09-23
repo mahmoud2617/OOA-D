@@ -1,4 +1,4 @@
-package OOA_D.Chapter1.chapter1_secondCode;
+package OOA_D.Chapter1.code_with_encapsulation;
 
 public enum Type {
     ACOUSTIC, ELECTRIC;
